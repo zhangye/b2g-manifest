@@ -9,7 +9,7 @@
 
 
 <!-- Gonk specific things and forks -->
-  < project name="platform_build" path="build" revision="master" >
+  <project name="platform_build" path="build" revision="master" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project name="fake-dalvik" path="dalvik" revision="master" />
