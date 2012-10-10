@@ -94,5 +94,6 @@
   <project name="u-boot" path="u-boot" />
   <project name="vendor/sprd/proprietories" path="vendor/sprd/proprietories" />
   <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" />
+  <project name="gaia/customize_apps" path="gaia/customize_apps" />
 </manifest>
 
