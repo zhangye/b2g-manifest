@@ -9,14 +9,16 @@
 
 
 <!-- Gonk specific things and forks -->
-  <project name="platform_build" path="build" revision="master" >
+  <project name="platform_build" path="build" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project name="fake-dalvik" path="dalvik" revision="master" />
-  <project name="gaia" path="gaia" revision="master" />
-  <project name="mozilla-central" path="gecko" revision="master" />
-  <project name="gonk-misc" path="gonk-misc" revision="master" />
-  <project name="rilproxy" path="rilproxy" revision="master" />
+  <project name="fake-dalvik" path="dalvik" />
+  <project name="gaia" path="gaia" />
+  <project name="mozilla-central" path="gecko" />
+  <project name="gonk-misc" path="gonk-misc" />
+  <project name="rilproxy" path="rilproxy" />
+  <project name="librecovery" path="librecovery" />
+  <project name="moztt" path="external/moztt" />
 
 
   <!-- Stock Android things -->
@@ -87,6 +89,8 @@
   <project name="platform/system/media" path="system/media" />
   <project name="platform/system/netd" path="system/netd" />
   <project name="platform/system/vold" path="system/vold" />
+  <project name="screencap-gonk" path="external/screencap-gonk" />
+
 
   <!-- sprd things -->
   <project name="kernel/common" path="kernel" />
