@@ -91,7 +91,6 @@
   <project name="platform/system/vold" path="system/vold" />
   <project name="screencap-gonk" path="external/screencap-gonk" />
 
-
   <!-- sprd things -->
   <project name="kernel/common" path="kernel" />
   <project name="device/sprd" path="device/sprd" />
@@ -99,8 +98,8 @@
   <project name="vendor/sprd/proprietories" path="vendor/sprd/proprietories" />
   <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" />
   <project name="gaia/customize_apps" path="gaia/customize_apps" />
+  <project name="gaia/local_mk" path="gaia/local_mk" />
   
   <!-- nokia things -->
   <project name="gaia/nokia_apps" path="gaia/nokia_apps" revision="nokia4.0.3_vlx_3.0_b2g" />
 </manifest>
-
