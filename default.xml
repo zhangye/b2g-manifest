@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="b2g" fetch="git://github.com/mozilla-b2g/" />
+  <remote  name="mozilla" fetch="git://github.com/mozilla/" />
   <remote  name="aosp"
            fetch="ssh://gitb2g@shandroid01.spreadtrum.com/b2g/" />
   <default revision="sprdroid4.0.3_vlx_3.0_b2g"
            remote="aosp"
            sync-j="4" />
 
-
-<!-- Gonk specific things and forks -->
-  <project name="platform_build" path="build" >
-    <copyfile src="core/root.mk" dest="Makefile" />
+  <!-- Gonk specific things and forks -->
+  <project name="platform_build" path="build" remote="b2g" revision="273ba23d5c6c9f6a34995a3cc429804d1449ca9f">
+    <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
-  <project name="fake-dalvik" path="dalvik" />
-  <project name="gaia" path="gaia" />
-  <project name="mozilla-central" path="gecko" />
-  <project name="gonk-misc" path="gonk-misc" />
-  <project name="rilproxy" path="rilproxy" />
-  <project name="librecovery" path="librecovery" />
-  <project name="moztt" path="external/moztt" />
-
+  <project name="fake-dalvik" path="dalvik" remote="b2g" revision="ca1f327d5acc198bb4be62fa51db2c039032c9ce"/>
+  <project name="gaia" path="gaia" remote="b2g" revision="176aea9cba4965594350f282751758b14d2624fc"/>
+  <project name="releases/gecko" path="gecko" remote="mozillaorg" revision="4eaacd3fad7b6da220de206c0013dc0f307455c9"/>
+  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="2f4377622f4c40275546c7816c0d4b21e800b4c6"/>
+  <project name="rilproxy" path="rilproxy" remote="b2g" revision="32106d4ea635ebe17a1610b643b398db639b8b97"/>
+  <project name="librecovery" path="librecovery" remote="b2g" revision="b7911c064a71a5c18e2c92f869f6364a798b46cd"/>
+  <project name="moztt" path="external/moztt" remote="b2g" revision="6ee1f8987ef36d688f97064c003ad57849dfadf2"/>
 
   <!-- Stock Android things -->
   <project name="platform/abi/cpp" path="abi/cpp" />
@@ -54,7 +54,6 @@
   <project name="platform/external/libpng" path="external/libpng" />
   <project name="platform/external/libvpx" path="external/libvpx" />
   <project name="platform/external/mksh" path="external/mksh" />
-  <project name="platform_external_opensans" path="external/opensans" />
   <project name="platform/external/openssl" path="external/openssl" />
   <project name="platform/external/protobuf" path="external/protobuf" />
   <project name="platform/external/safe-iop" path="external/safe-iop" />
@@ -89,7 +88,8 @@
   <project name="platform/system/media" path="system/media" />
   <project name="platform/system/netd" path="system/netd" />
   <project name="platform/system/vold" path="system/vold" />
-  <project name="screencap-gonk" path="external/screencap-gonk" />
+  <project name="platform_external_opensans" path="external/opensans" remote="b2g" revision="b5b4c226ca1d71e936153cf679dda6d3d60e2354"/>
+  <project name="screencap-gonk" path="external/screencap-gonk" remote="b2g" revision="e6403c71e9eca8cb943739d5a0a192deac60fc51"/>
 
   <!-- sprd things -->
   <project name="kernel/common" path="kernel" />
@@ -97,10 +97,4 @@
   <project name="u-boot" path="u-boot" />
   <project name="vendor/sprd/proprietories" path="vendor/sprd/proprietories" />
   <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" />
-  <project name="gaia/customize_apps" path="gaia/customize_apps" />
-  
-  
-  <!-- nokia things -->
-  <project name="gaia/local_mk" path="gaia/local_mk" revision="nokia4.0.3_vlx_3.0_b2g" />
-  <project name="gaia/nokia_apps" path="gaia/nokia_apps" revision="nokia4.0.3_vlx_3.0_b2g" />
 </manifest>
