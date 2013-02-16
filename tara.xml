@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
+  <remote fetch="git://github.com/mozilla/" name="mozilla"/>
+  <remote fetch="https://git.mozilla.org" name="mozillaorg"/>
+  <remote  name="aosp"
+           fetch="ssh://gitb2g@shandroid01.spreadtrum.com/b2g/" />
+  <default revision="sprdroid4.0.3_vlx_3.0_b2g"
+           remote="aosp"
+           sync-j="4" />
+
+  <!-- Gonk specific things and forks -->
+  <!-- Mercurial-Information: <remote fetch="http://hg.mozilla.org/" name="hgmozillaorg"> -->
+  <!-- Mercurial-Information: <project name="releases/mozilla-b2g18" path="gecko" remote="hgmozillaorg" revision="32f66481e161"/> -->
+  <!-- Mercurial-Information: <project name="integration/gaia-1_0_0" path="gaia" remote="hgmozillaorg" revision="67a5b7f79b73"/> -->
+  <project name="releases/gecko" path="gecko" remote="mozillaorg" revision="b8fe91c957fc9c65d5606efdb614a63d176787c2"/>
+  <project name="releases/gaia" path="gaia" remote="mozillaorg" revision="c37feba266474f10d9c9ec6c38c0641b3f7e6c47"/>
+  <!-- Mercurial-Information: <project name="gaia-l10n/fr" path="gaia-l10n/fr" remote="hgmozillaorg" revision="c426869442ff"/> -->
+  <!-- Mercurial-Information: <project name="gaia-l10n/zh-TW" path="gaia-l10n/zh-TW" remote="hgmozillaorg" revision="d051cfc84ce8"/> -->
+  <!-- Mercurial-Information: <project name="gaia-l10n/en-US" path="gaia-l10n/en-US" remote="hgmozillaorg" revision="c30af8f02e20"/> -->
+  <!-- Mercurial-Information: <project name="gaia-l10n/ar" path="gaia-l10n/ar" remote="hgmozillaorg" revision="f547694298c6"/> -->
+  <!-- Mercurial-Information: <project name="gaia-l10n/pt-BR" path="gaia-l10n/pt-BR" remote="hgmozillaorg" revision="37d4d8a15923"/> -->
+  <!-- Mercurial-Information: <project name="gaia-l10n/es" path="gaia-l10n/es" remote="hgmozillaorg" revision="473486c2a9db"/> -->
+  <!-- Mercurial-Information: <project name="releases/l10n/mozilla-beta/pt-BR" path="gecko-l10n/pt-BR" remote="hgmozillaorg" revision="d4b73ff5cb4f"/> -->
+  <!-- Mercurial-Information: <project name="releases/l10n/mozilla-beta/es-ES" path="gecko-l10n/es-ES" remote="hgmozillaorg" revision="d079838fbf3c"/> -->
+  <project name="platform_build" path="build" remote="b2g" revision="0784cdcb29ae45e5bf903cc03fa1bc206162665b">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+  </project>
+  <project name="fake-dalvik" path="dalvik" remote="b2g" revision="ca1f327d5acc198bb4be62fa51db2c039032c9ce"/>
+  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="2f8c7d3546bda16b02a61b422786919875c19f15"/>
+  <project name="rilproxy" path="rilproxy" remote="b2g" revision="2d380d27c86263537f6b829cd0238f5dd702c735"/>
+  <project name="librecovery" path="librecovery" remote="b2g" revision="601fc18b28c9d7cf6954b281ddd3b705c74a9215"/>
+  <project name="moztt" path="external/moztt" remote="b2g" revision="6ee1f8987ef36d688f97064c003ad57849dfadf2"/>
+
+  <!-- Stock Android things -->
+  <project name="platform/abi/cpp" path="abi/cpp" />
+  <project name="platform/bionic" path="bionic" />
+  <project name="platform/bootable/recovery" path="bootable/recovery" />
+  <project name="device/common" />
+  <project name="platform/external/apache-http" path="external/apache-http" />
+  <project name="platform/external/bluetooth/bluez" path="external/bluetooth/bluez" />
+  <project name="platform/external/bluetooth/glib" path="external/bluetooth/glib" />
+  <project name="platform/external/bluetooth/hcidump" path="external/bluetooth/hcidump" />
+  <project name="platform/external/bsdiff" path="external/bsdiff" />
+  <project name="platform/external/bzip2" path="external/bzip2" />
+  <project name="platform/external/dbus" path="external/dbus" />
+  <project name="platform/external/dhcpcd" path="external/dhcpcd" />
+  <project name="platform/external/dnsmasq" path="external/dnsmasq" />
+  <project name="platform/external/expat" path="external/expat" />
+  <project name="platform/external/fdlibm" path="external/fdlibm" />
+  <project name="platform/external/flac" path="external/flac" />
+  <project name="platform/external/freetype" path="external/freetype" />
+  <project name="platform/external/giflib" path="external/giflib" />
+  <project name="platform/external/gtest" path="external/gtest" />
+  <project name="platform/external/harfbuzz" path="external/harfbuzz" />
+  <project name="platform/external/icu4c" path="external/icu4c" />
+  <project name="platform/external/iptables" path="external/iptables" />
+  <project name="platform/external/jhead" path="external/jhead" />
+  <project name="platform/external/jpeg" path="external/jpeg" />
+  <project name="platform/external/libgsm" path="external/libgsm" />
+  <project name="platform/external/liblzf" path="external/liblzf" />
+  <project name="platform/external/libnfc-nxp" path="external/libnfc-nxp" />
+  <project name="platform/external/libnl-headers" path="external/libnl-headers" />
+  <project name="platform/external/libphonenumber" path="external/libphonenumber" />
+  <project name="platform/external/libpng" path="external/libpng" />
+  <project name="platform/external/libvpx" path="external/libvpx" />
+  <project name="platform/external/mksh" path="external/mksh" />
+  <project name="platform/external/openssl" path="external/openssl" />
+  <project name="platform/external/protobuf" path="external/protobuf" />
+  <project name="platform/external/safe-iop" path="external/safe-iop" />
+  <project name="platform/external/skia" path="external/skia" />
+  <project name="platform/external/sonivox" path="external/sonivox" />
+  <project name="platform/external/speex" path="external/speex" />
+  <project name="platform/external/sqlite" path="external/sqlite" />
+  <project name="platform/external/stlport" path="external/stlport" />
+  <project name="platform/external/strace" path="external/strace" />
+  <project name="platform/external/tagsoup" path="external/tagsoup" />
+  <project name="platform/external/tinyalsa" path="external/tinyalsa" />
+  <project name="platform/external/tremolo" path="external/tremolo" />
+  <project name="platform/external/webp" path="external/webp" />
+  <project name="platform/external/webrtc" path="external/webrtc" />
+  <project name="platform/external/wpa_supplicant" path="external/wpa_supplicant" />
+  <project name="platform/external/wpa_supplicant_6" path="external/wpa_supplicant_6" />
+  <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" />
+  <project name="platform/external/zlib" path="external/zlib" />
+  <project name="platform/external/yaffs2" path="external/yaffs2" />
+  <project name="platform/frameworks/base" path="frameworks/base" />
+  <project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" />
+  <project name="platform/frameworks/support" path="frameworks/support" />
+  <project name="platform/hardware/libhardware" path="hardware/libhardware" />
+  <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" />
+  <project name="platform/hardware/ril" path="hardware/ril" />
+  <project name="platform/libcore" path="libcore" />
+  <project name="platform/ndk" path="ndk" />
+  <project name="platform/prebuilt" path="prebuilt" />
+  <project name="platform/system/bluetooth" path="system/bluetooth" />
+  <project name="platform/system/core" path="system/core" />
+  <project name="platform/system/extras" path="system/extras" />
+  <project name="platform/system/media" path="system/media" />
+  <project name="platform/system/netd" path="system/netd" />
+  <project name="platform/system/vold" path="system/vold" />
+  <project name="platform_external_opensans" path="external/opensans" remote="b2g" revision="b5b4c226ca1d71e936153cf679dda6d3d60e2354"/>
+  <project name="screencap-gonk" path="external/screencap-gonk" remote="b2g" revision="e6403c71e9eca8cb943739d5a0a192deac60fc51"/>
+
+  <!-- sprd things -->
+  <project name="kernel/common" path="kernel" />
+  <project name="device/sprd" path="device/sprd" />
+  <project name="u-boot" path="u-boot" />
+  <project name="vendor/sprd/proprietories" path="vendor/sprd/proprietories" />
+  <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" />
+</manifest>
