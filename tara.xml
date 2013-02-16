@@ -4,26 +4,14 @@
   <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
   <remote fetch="git://github.com/mozilla/" name="mozilla"/>
   <remote fetch="https://git.mozilla.org" name="mozillaorg"/>
-  <remote  name="aosp"
-           fetch="ssh://gitb2g@shandroid01.spreadtrum.com/b2g/" />
+  <remote  name="aosp" fetch="http://sprdsource.spreadtrum.com:8085/b2g/" />
   <default revision="sprdroid4.0.3_vlx_3.0_b2g"
            remote="aosp"
            sync-j="4" />
 
   <!-- Gonk specific things and forks -->
-  <!-- Mercurial-Information: <remote fetch="http://hg.mozilla.org/" name="hgmozillaorg"> -->
-  <!-- Mercurial-Information: <project name="releases/mozilla-b2g18" path="gecko" remote="hgmozillaorg" revision="32f66481e161"/> -->
-  <!-- Mercurial-Information: <project name="integration/gaia-1_0_0" path="gaia" remote="hgmozillaorg" revision="67a5b7f79b73"/> -->
   <project name="releases/gecko" path="gecko" remote="mozillaorg" revision="b8fe91c957fc9c65d5606efdb614a63d176787c2"/>
   <project name="releases/gaia" path="gaia" remote="mozillaorg" revision="c37feba266474f10d9c9ec6c38c0641b3f7e6c47"/>
-  <!-- Mercurial-Information: <project name="gaia-l10n/fr" path="gaia-l10n/fr" remote="hgmozillaorg" revision="c426869442ff"/> -->
-  <!-- Mercurial-Information: <project name="gaia-l10n/zh-TW" path="gaia-l10n/zh-TW" remote="hgmozillaorg" revision="d051cfc84ce8"/> -->
-  <!-- Mercurial-Information: <project name="gaia-l10n/en-US" path="gaia-l10n/en-US" remote="hgmozillaorg" revision="c30af8f02e20"/> -->
-  <!-- Mercurial-Information: <project name="gaia-l10n/ar" path="gaia-l10n/ar" remote="hgmozillaorg" revision="f547694298c6"/> -->
-  <!-- Mercurial-Information: <project name="gaia-l10n/pt-BR" path="gaia-l10n/pt-BR" remote="hgmozillaorg" revision="37d4d8a15923"/> -->
-  <!-- Mercurial-Information: <project name="gaia-l10n/es" path="gaia-l10n/es" remote="hgmozillaorg" revision="473486c2a9db"/> -->
-  <!-- Mercurial-Information: <project name="releases/l10n/mozilla-beta/pt-BR" path="gecko-l10n/pt-BR" remote="hgmozillaorg" revision="d4b73ff5cb4f"/> -->
-  <!-- Mercurial-Information: <project name="releases/l10n/mozilla-beta/es-ES" path="gecko-l10n/es-ES" remote="hgmozillaorg" revision="d079838fbf3c"/> -->
   <project name="platform_build" path="build" remote="b2g" revision="0784cdcb29ae45e5bf903cc03fa1bc206162665b">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
