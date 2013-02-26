@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
-  <remote fetch="git://github.com/mozilla/" name="mozilla"/>
-  <remote fetch="https://git.mozilla.org" name="mozillaorg"/>
+  <remote name="b2g" fetch="https://git.mozilla.org/b2g"/>
+  <remote name="mozilla" fetch="git://github.com/mozilla/"/>
+  <remote name="linaro" fetch="git://android.git.linaro.org/"/>
+  <remote name="mozillaorg" fetch="https://git.mozilla.org/releases/"/>
   <remote  name="aosp" fetch="http://sprdsource.spreadtrum.com:8085/b2g/" />
   <default revision="sprdroid4.0.3_vlx_3.0_b2g"
            remote="aosp"
            sync-j="4" />
 
   <!-- Gonk specific things and forks -->
-  <project name="releases/gecko" path="gecko" remote="mozillaorg" revision="b8fe91c957fc9c65d5606efdb614a63d176787c2"/>
-  <project name="releases/gaia" path="gaia" remote="mozillaorg" revision="c37feba266474f10d9c9ec6c38c0641b3f7e6c47"/>
+  <project name="gecko" path="gecko" remote="mozillaorg" revision="b8fe91c957fc9c65d5606efdb614a63d176787c2"/>
+  <project name="gaia" path="gaia" remote="mozillaorg" revision="c37feba266474f10d9c9ec6c38c0641b3f7e6c47"/>
   <project name="platform_build" path="build" remote="b2g" revision="0784cdcb29ae45e5bf903cc03fa1bc206162665b">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
@@ -40,7 +41,7 @@
   <project name="platform/external/flac" path="external/flac" />
   <project name="platform/external/freetype" path="external/freetype" />
   <project name="platform/external/giflib" path="external/giflib" />
-  <project name="platform/external/gtest" path="external/gtest" />
+  <project path="external/gtest" name="platform/external/gtest" remote="linaro" revision="344e5f3db17615cc853073a02968a603efd39109"/>
   <project name="platform/external/harfbuzz" path="external/harfbuzz" />
   <project name="platform/external/icu4c" path="external/icu4c" />
   <project name="platform/external/iptables" path="external/iptables" />
