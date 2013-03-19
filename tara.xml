@@ -11,16 +11,16 @@
            sync-j="4" />
 
   <!-- Gonk specific things and forks -->
-  <project name="gecko" path="gecko" remote="mozillaorg" revision="b8fe91c957fc9c65d5606efdb614a63d176787c2"/>
-  <project name="gaia" path="gaia" remote="mozillaorg" revision="c37feba266474f10d9c9ec6c38c0641b3f7e6c47"/>
-  <project name="platform_build" path="build" remote="b2g" revision="0784cdcb29ae45e5bf903cc03fa1bc206162665b">
+  <project name="gecko" path="gecko" remote="mozillaorg" revision="master"/>
+  <project name="gaia" path="gaia" remote="mozillaorg" revision="master"/>
+  <project name="platform_build" path="build" remote="b2g" revision="master">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
-  <project name="fake-dalvik" path="dalvik" remote="b2g" revision="ca1f327d5acc198bb4be62fa51db2c039032c9ce"/>
-  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="2f8c7d3546bda16b02a61b422786919875c19f15"/>
-  <project name="rilproxy" path="rilproxy" remote="b2g" revision="2d380d27c86263537f6b829cd0238f5dd702c735"/>
-  <project name="librecovery" path="librecovery" remote="b2g" revision="601fc18b28c9d7cf6954b281ddd3b705c74a9215"/>
-  <project name="moztt" path="external/moztt" remote="b2g" revision="6ee1f8987ef36d688f97064c003ad57849dfadf2"/>
+  <project name="fake-dalvik" path="dalvik" remote="b2g" revision="master"/>
+  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="master"/>
+  <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
+  <project name="librecovery" path="librecovery" remote="b2g" revision="master"/>
+  <project name="moztt" path="external/moztt" remote="b2g" revision="master"/>
 
   <!-- Stock Android things -->
   <project name="platform/abi/cpp" path="abi/cpp" />
